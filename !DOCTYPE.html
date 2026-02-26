@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply U+ Galaxy S26 Ultra</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        magenta: '#E6007E',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Hide scrollbar for tab menu */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center">
+
+    <div class="flex flex-col min-h-screen bg-white font-sans text-gray-900 w-full max-w-md shadow-2xl relative">
+        <header class="p-4 flex justify-between items-center border-b sticky top-0 bg-white z-10">
+            <div class="font-bold text-xl flex items-center text-magenta">
+                Simply <span class="ml-1 font-black underline">U+</span>
+            </div>
+            <div class="bg-gray-100 px-3 py-1 rounded-full text-xs font-bold text-gray-500">매장 방문 고객 전용</div>
+        </header>
+
+        <section class="relative overflow-hidden pt-8 pb-4 px-6 bg-gradient-to-b from-gray-50 to-white text-center">
+            <h2 class="text-sm font-bold tracking-widest mb-2 text-magenta">GALAXY S26 ULTRA</h2>
+            <h1 class="text-3xl font-black leading-tight mb-4">최고의 S26,<br />오직 당신을 위해.</h1>
+            <div class="relative mx-auto w-64 h-64 mb-4">
+                <div class="absolute inset-0 bg-gray-200 rounded-3xl transform rotate-3 scale-95 opacity-50"></div>
+                <div class="absolute inset-0 bg-white shadow-xl rounded-3xl p-4 flex flex-col justify-center items-center border border-gray-100">
+                    <i data-lucide="smartphone" class="w-32 h-32 mb-2 text-magenta"></i>
+                    <p class="text-[10px] text-gray-400">이미지: 갤럭시 S26 울트라</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-6 mx-4 rounded-2xl shadow-lg border-2 border-magenta">
+            <div class="flex items-center mb-4 text-magenta">
+                <i data-lucide="sparkles" class="w-5 h-5 mr-2"></i>
+                <span class="font-bold text-lg text-gray-900">지금 구매 시 풀 패키지 0원</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+                <div class="text-center p-2 bg-gray-50 rounded-lg">
+                    <i data-lucide="watch" class="w-8 h-8 mx-auto mb-1 text-gray-700"></i>
+                    <p class="text-[10px] font-bold">워치8</p>
+                    <p class="text-[12px] text-pink-600 font-black">전액할인</p>
+                </div>
+                <div class="text-center p-2 bg-gray-50 rounded-lg">
+                    <i data-lucide="headset" class="w-8 h-8 mx-auto mb-1 text-gray-700"></i>
+                    <p class="text-[10px] font-bold">버즈3</p>
+                    <p class="text-[12px] text-pink-600 font-black">전액할인</p>
+                </div>
+                <div class="text-center p-2 bg-gray-50 rounded-lg">
+                    <i data-lucide="tablet" class="w-8 h-8 mx-auto mb-1 text-gray-700"></i>
+                    <p class="text-[10px] font-bold">탭 A11+</p>
+                    <p class="text-[12px] text-pink-600 font-black">전액할인</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-10">
+            <h3 class="text-xl font-black mb-6 flex items-center">
+                <span class="w-1.5 h-6 mr-2 rounded-full bg-magenta"></span>
+                당신께 추천하는 AI 라이프
+            </h3>
+            
+            <div id="tab-buttons" class="flex overflow-x-auto gap-2 mb-6 no-scrollbar pb-2">
+                </div>
+
+            <div id="tab-content" class="bg-gray-50 rounded-3xl p-6 min-h-[320px] transition-all duration-500">
+                </div>
+        </section>
+
+        <footer class="mt-auto p-6 bg-white border-t space-y-4 pb-10">
+            <button 
+                onclick="window.open('https://www.lguplus.com', '_blank')"
+                class="w-full py-4 rounded-2xl text-white font-black text-lg shadow-xl active:scale-95 transition-transform flex justify-center items-center bg-magenta"
+            >
+                나에게 꼭 맞는 AI기능 추천받기
+                <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+            </button>
+            <p class="text-center text-[11px] text-gray-400">
+                본 혜택은 매장 상담 및 특정 요금제 이용 시 적용 가능합니다.<br />
+                &copy; LG Uplus Corp. All Rights Reserved.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        const customerTypes = [
+            {
+                title: "가족/학부모",
+                icon: "users",
+                tagline: "아이 학교 통신문, 손가락 없이 깔끔하게!",
+                features: ["AI 스캔: 그림자/손가락 자동 제거", "Now Brief: 아침마다 가족 일정 브리핑"],
+                description: "바쁜 아침, AI가 챙겨주는 우리 가족 스케줄과 깔끔한 서류 정리로 여유를 찾으세요."
+            },
+            {
+                title: "외국인/유학생",
+                icon: "globe",
+                tagline: "언어 장벽 없는 한국 생활의 시작",
+                features: ["실시간 통역: 통화 중 즉시 번역", "서클 투 서치: 궁금한 식재료 정보 검색"],
+                description: "한국어 안내판이나 낯선 식재료, 이제 사진 찍을 필요도 없이 원만 그리세요."
+            },
+            {
+                title: "직장인/전문직",
+                icon: "briefcase",
+                tagline: "완벽한 비즈니스 보안과 효율성",
+                features: ["프라이버시 디스플레이: 시야 차단 보안", "나우 넛지: 대화 맥락 읽고 일정 제안"],
+                description: "이동 중 업무 보안은 지키고, 복잡한 미팅 일정은 AI가 알아서 제안합니다."
+            },
+            {
+                title: "시니어/어르신",
+                icon: "heart",
+                tagline: "보이스피싱 걱정 없는 안심 전화",
+                features: ["AI 통화 스크리닝: 용건 요약 서비스", "큰 글씨 모드 & AI 음성 안내"],
+                description: "모르는 번호는 AI가 대신 받아 요약해주니 안심하고 사용하세요."
+            },
+            {
+                title: "현장직/기술자",
+                icon: "construction",
+                tagline: "소음은 지우고 선명함만 남기세요",
+                features: ["오디오 이레이저: 현장 소음 제거", "AI 스캔: 기름때 묻은 도면 복원"],
+                description: "시끄러운 현장에서도 내 목소리만 전달하고, 낡은 도면도 선명하게 확인합니다."
+            },
+            {
+                title: "여행/쇼퍼",
+                icon: "map-pin",
+                tagline: "인생샷 완성부터 즉시 쇼핑까지",
+                features: ["포토 어시스트: 사람 제거/이동", "서클 투 서치: 본 상품 즉시 구매"],
+                description: "여행지 인파는 AI로 지우고, 길에서 본 예쁜 소품은 바로 검색해서 구매하세요."
+            },
+            {
+                title: "1인가구/대학생",
+                icon: "user",
+                tagline: "똑똑한 일상 관리와 SNS 전문가",
+                features: ["생성형 편집: 전문가급 사진 보정", "나우 넛지: 배달/택배 일정 관리"],
+                description: "배달 관리부터 SNS용 사진 보정까지, 나만의 똑똑한 비서가 생깁니다."
+            }
+        ];
+
+        let activeTab = 0;
+
+        function renderTabs() {
+            const tabButtons = document.getElementById('tab-buttons');
+            tabButtons.innerHTML = customerTypes.map((type, idx) => `
+                <button
+                    onclick="setActiveTab(${idx})"
+                    class="flex-none px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${activeTab === idx ? 'text-white shadow-md bg-magenta' : 'bg-gray-100 text-gray-500'}"
+                >
+                    ${type.title}
+                </button>
+            `).join('');
+        }
+
+        function renderContent() {
+            const tabContent = document.getElementById('tab-content');
+            const data = customerTypes[activeTab];
+            
+            const featuresHtml = data.features.map(f => `
+                <li class="flex items-center text-sm font-bold text-gray-800">
+                    <div class="w-1.5 h-1.5 rounded-full mr-2 bg-magenta"></div>
+                    ${f}
+                </li>
+            `).join('');
+
+            tabContent.innerHTML = `
+                <div class="flex items-center mb-4">
+                    <div class="p-3 bg-white rounded-2xl shadow-sm mr-4 text-magenta">
+                        <i data-lucide="${data.icon}" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-lg leading-tight">${data.tagline}</h4>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-4 mb-4 shadow-sm">
+                    <div class="w-full h-40 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 text-sm mb-3 overflow-hidden">
+                        <div class="relative w-full h-full flex flex-col items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-white/80 flex items-center justify-center mb-2">
+                                <div class="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-magenta border-b-[8px] border-b-transparent ml-1"></div>
+                            </div>
+                            <span class="font-bold">AI 기능 시연 영상 보기</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        ${data.description}
+                    </p>
+                    <ul class="space-y-2">
+                        ${featuresHtml}
+                    </ul>
+                </div>
+            `;
+            
+            // DOM이 변경되었으므로 Lucide 아이콘 다시 렌더링
+            lucide.createIcons();
+        }
+
+        function setActiveTab(idx) {
+            activeTab = idx;
+            renderTabs();
+            renderContent();
+        }
+
+        // 초기화 실행
+        renderTabs();
+        renderContent();
+        lucide.createIcons(); // 초기 정적 HTML의 아이콘들도 렌더링
+    </script>
+</body>
+</html>
